@@ -1,5 +1,7 @@
 package com.hmdp.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.hmdp.dto.Result;
 import com.hmdp.entity.ShopType;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -12,5 +14,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-12-22
  */
 public interface IShopTypeService extends IService<ShopType> {
-
+    /**
+     * 查询所有商铺类型
+     * @return
+     */
+    Result queryList() throws JsonProcessingException;
 }
